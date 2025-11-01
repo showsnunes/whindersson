@@ -1,37 +1,48 @@
 <!DOCTYPE html>
-  <html lang="pt-BR">
-    <head>
-    
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whindersson Nunes - Isso definitivamente não é um culto</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background-color: #0f0f0f; color: #fff; scroll-behavior: smooth; }
-    header { background: rgba(0, 0, 0, 0.85); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(5px); }
-    header h1 { color: #ffd700; font-size: 20px; letter-spacing: 1px; }
-    nav a { color: #fff; text-decoration: none; margin-left: 20px; transition: 0.3s; }
-    nav a:hover { color: #ffd700; }
-    .hero { background: url('https://i.imgur.com/EReHWgU.jpeg') center/cover no-repeat; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; }
-    .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-    .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 20px; }
-    .hero h2 { font-size: 40px; color: #ffd700; margin-bottom: 10px; }
-    .hero p { font-size: 20px; margin-bottom: 25px; }
-    .btn { background: #ffd700; color: #000; padding: 15px 35px; border: none; border-radius: 30px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
-    .btn:hover { background: #ffcc00; transform: scale(1.05); }
-    .countdown { font-size: 22px; color: #ffd700; margin-top: 20px; font-weight: bold; }
-    .tickets { padding: 100px 20px 60px; background: #111; text-align: center; }
-    .tickets h3 { color: #ffd700; font-size: 28px; margin-bottom: 40px; }
-    .ticket-cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
-    .card { background: #1a1a1a; border-radius: 20px; padding: 30px; width: 280px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); transition: 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    .card h4 { color: #ffd700; margin-bottom: 10px; }
-    .card p { margin-bottom: 15px; color: #ccc; }
-    footer { background: #000; padding: 30px 10px; text-align: center; font-size: 14px; }
-    footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
-    .whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 28px; text-decoration: none; box-shadow: 0 0 15px rgba(0,0,0,0.4); transition: 0.3s; }
-    .whatsapp:hover { transform: scale(1.1); }  /* Modal */
+  <html lang="pt-BR">
+    <head>
+    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whindersson Nunes - Isso definitivamente não é um culto</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background-color: #0f0f0f; color: #fff; scroll-behavior: smooth; }
+    header { background: rgba(0, 0, 0, 0.85); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(5px); }
+    header h1 { color: #ffd700; font-size: 20px; letter-spacing: 1px; }
+    nav a { color: #fff; text-decoration: none; margin-left: 20px; transition: 0.3s; }
+    nav a:hover { color: #ffd700; }
+    /* Fundo principal: WhatsApp Image 2025-11-01 at 10.56.31.jpeg */
+    .hero { background: url('WhatsApp Image 2025-11-01 at 10.56.31.jpeg') center/cover no-repeat; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 20px; }
+    .hero h2 { font-size: 40px; color: #ffd700; margin-bottom: 10px; }
+    .hero p { font-size: 20px; margin-bottom: 25px; }
+    .btn { background: #ffd700; color: #000; padding: 15px 35px; border: none; border-radius: 30px; font-weight: bold; font-size: 16px; cursor: pointer; transition: 0.3s; }
+    .btn:hover { background: #ffcc00; transform: scale(1.05); }
+    .countdown { font-size: 22px; color: #ffd700; margin-top: 20px; font-weight: bold; }
+
+    /* Fundo da seção Ingressos (usando imagem de busca como banner) */
+    .tickets { padding: 100px 20px 60px; background: url('https://i.imgur.com/EReHWgU.jpeg') center/cover no-repeat fixed; text-align: center; position: relative; }
+    .tickets::before { content: ''; position: absolute; inset: 0; background: rgba(17, 17, 17, 0.8); }
+    .tickets > * { position: relative; z-index: 1; }
+
+    .tickets h3 { color: #ffd700; font-size: 28px; margin-bottom: 40px; }
+    .ticket-cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
+    .card { background: #1a1a1a; border-radius: 20px; padding: 30px; width: 280px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); transition: 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h4 { color: #ffd700; margin-bottom: 10px; }
+    .card p { margin-bottom: 15px; color: #ccc; }
+
+    /* Card Camarote com destaque: WhatsApp Image 2025-11-01 at 10.56.32.jpeg */
+    .card-camarote { background: #1a1a1a url('WhatsApp Image 2025-11-01 at 10.56.32.jpeg') no-repeat center top; background-size: contain; padding-top: 150px; }
+    .card-camarote h4, .card-camarote p, .card-camarote .btn { background: rgba(26, 26, 26, 0.9); padding: 5px; border-radius: 5px; }
+
+    footer { background: #000; padding: 30px 10px; text-align: center; font-size: 14px; }
+    footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+    .whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; font-size: 28px; text-decoration: none; box-shadow: 0 0 15px rgba(0,0,0,0.4); transition: 0.3s; }
+    .whatsapp:hover { transform: scale(1.1); }  /* Modal */
 .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; padding: 20px; z-index: 2000; }
 .modal { background: #0f0f0f; border-radius: 12px; padding: 20px; max-width: 520px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.6); border: 1px solid rgba(255,215,0,0.08); }
 .modal h3 { color: #ffd700; margin-bottom: 6px; }
@@ -40,15 +51,15 @@
 .copy-btn { background: #222; border: 1px solid rgba(255,255,255,0.06); color: #fff; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
 /* Estilo para que a chave PIX longa quebre a linha e fique legível */
 .modal code {
-    word-break: break-all;
-    font-size: 16px; /* Aumentei o tamanho da fonte para a chave Pix */
-    font-weight: bold; /* Deixei a chave Pix em negrito */
+    word-break: break-all;
+    font-size: 16px; /* Aumentei o tamanho da fonte para a chave Pix */
+    font-weight: bold; /* Deixei a chave Pix em negrito */
 }
 
 input[type=file] { color: #fff; }
 .small { font-size: 13px; color: #cfcfcf; }
 .success { background: rgba(37,211,102,0.12); color: #25d366; padding: 8px; border-radius: 8px; margin-top: 8px; }
-.hidden { display: none; }    /* Botão fechar destacado */
+.hidden { display: none; }    /* Botão fechar destacado */
 #closeModalBtn {
 background: #ff4c4c;
 color: #fff;
@@ -68,89 +79,93 @@ transition: 0.3s;
 nav a { margin-left: 10px; font-size: 14px; }
 }
 
-  </style>
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Show Whindersson Nunes</h1>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#tickets">Ingressos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>    <section class="hero">
-    <div class="hero-content">
-      <h2>Isso definitivamente não é um culto</h2>
-      <p><strong>Whindersson Nunes - Teresina, PI</strong></p>
-      <p>Reabertura de vendas em breve! Garanta o seu lugar!</p>
-      <div class="countdown" id="countdown"></div>
-      <button class="btn" id="comprarHero">Ver ingressos</button>
-    </div>
-  </section>    <section id="tickets" class="tickets">
-    <h3>Tipos de Ingressos</h3>
-    <div class="ticket-cards">
-      <div class="card">
-        <h4>Pista</h4>
-        <p>Ingresso padrão, área comum.</p>
-        <p><strong>R$ 60,00</strong></p>
-        <button class="btn comprarBtn" data-tipo="Pista" data-valor="60">Comprar</button>
-      </div>
-      <div class="card">
-        <h4>VIP</h4>
-        <p>Acesso exclusivo, área reservada.</p>
-        <p><strong>R$ 120,00</strong></p>
-        <button class="btn comprarBtn" data-tipo="VIP" data-valor="120">Comprar</button>
-      </div>
-      <div class="card">
-        <h4>Camarote</h4>
-        <p>Visão privilegiada e serviço premium.</p>
-        <p><strong>R$ 250,00</strong></p>
-        <button class="btn comprarBtn" data-tipo="Camarote" data-valor="250">Comprar</button>
-      </div>
-    </div>
-  </section>    <footer id="contato">
-    <p>© 2025 Show Whindersson Nunes - Todos os direitos reservados.</p>
-    <p>
-      <a href="https://instagram.com/whinderssonnunes" target="_blank">Instagram</a> |
-      <a href="mailto:contato@ingressoswhindersson.com">contato@ingressoswhindersson.com</a>
-    </p>
-  </footer>  <a class="whatsapp" href="https://lp.nonstop.com.br/validador-telefone" target="_blank">💬</a>    <div class="modal-backdrop" id="modalBackdrop">    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <h3 id="modalTitle">Pagamento via Pix</h3>
-  <p id="modalInfo">Realize o pagamento via Pix e envie o comprovante pelo WhatsApp para confirmação.</p>  <div style="margin-top:8px">
+  <header>
+    <h1>Show Whindersson Nunes</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#tickets">Ingressos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>    <section class="hero">
+    <div class="hero-content">
+      <h2>Isso definitivamente não é um culto</h2>
+      <p><strong>Whindersson Nunes - Teresina, PI</strong></p>
+              <p>Local: **Estádio Albertão**</p>
+      <p>Endereço: Rua Dr. Ocílio Lago, 1197 - Redenção</p>
+      <p>Reabertura de vendas em breve! Garanta o seu lugar!</p>
+      <div class="countdown" id="countdown"></div>
+      <button class="btn" id="comprarHero">Ver ingressos</button>
+    </div>
+  </section>    <section id="tickets" class="tickets">
+    <h3>Tipos de Ingressos</h3>
+    <div class="ticket-cards">
+      <div class="card">
+        <h4>Pista</h4>
+        <p>Ingresso padrão, área comum.</p>
+        <p><strong>R$ 60,00</strong></p>
+        <button class="btn comprarBtn" data-tipo="Pista" data-valor="60">Comprar</button>
+      </div>
+      <div class="card">
+        <h4>VIP</h4>
+        <p>Acesso exclusivo, área reservada.</p>
+        <p><strong>R$ 120,00</strong></p>
+        <button class="btn comprarBtn" data-tipo="VIP" data-valor="120">Comprar</button>
+      </div>
+      <div class="card card-camarote">         <h4>Camarote</h4>
+        <p>Visão privilegiada e serviço premium.</p>
+        <p><strong>R$ 250,00</strong></p>
+        <button class="btn comprarBtn" data-tipo="Camarote" data-valor="250">Comprar</button>
+      </div>
+    </div>
+  </section>    <footer id="contato">
+    <p>© 2025 Show Whindersson Nunes - Todos os direitos reservados.</p>
+    <p>
+      **Local:** Estádio Albertão (Rua Dr. Ocílio Lago, 1197)
+    </p>
+    <p>
+      <a href="https://instagram.com/whinderssonnunes" target="_blank">Instagram</a> |
+      <a href="mailto:contato@ingressoswhindersson.com">contato@ingressoswhindersson.com</a>
+    </p>
+  </footer>  <a class="whatsapp" href="https://lp.nonstop.com.br/validador-telefone" target="_blank">💬</a>    <div class="modal-backdrop" id="modalBackdrop">    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <h3 id="modalTitle">Pagamento via Pix</h3>
+  <p id="modalInfo">Realize o pagamento via Pix e envie o comprovante pelo WhatsApp para confirmação.</p>  <div style="margin-top:8px">
 <p class="small">Tipo: <strong id="selTipo">—</strong></p>
 <p class="small">Valor: <strong id="selValor">R$ 0,00</strong></p>
 
-  </div>      <hr style="border:none;border-top:1px solid rgba(255,255,255,.04);margin:12px 0">      <p class="small">Chave Pix:</p>
-  <div class="row" style="margin-bottom:8px">
-    <code id="pixKey" style="font-size: 16px; font-weight: bold; word-break: break-all;">ebd43383-1553-4bbc-ac67-cffd1d275e51</code>
-    <button class="copy-btn" id="copyPixBtn">Copiar</button>
-  </div>      <p class="small">Após realizar o pagamento pelo Pix, envie o comprovante via WhatsApp.</p>
-  <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-    <button class="btn" id="openWhatsBtn">Abrir WhatsApp e enviar comprovante</button>
-    <button id="closeModalBtn">Fechar</button>
-  </div>      <p class="small" style="margin-top:12px">Mensagem automática exibida ao usuário ao abrir o WhatsApp:</p>
-  <div style="background:#111;padding:10px;border-radius:8px;margin-top:6px">
-    <p class="small" id="waMessagePreview">Olá! Eu comprei *{TIPO}* — R$ {VALOR}. Segue comprovante em anexo. Aguardo confirmação, por favor.</p>
-  </div>      <div id="afterMessage" class="success hidden">✅ Obrigado! Após enviar o comprovante, aguarde a confirmação.</div>
-</div>    </div>    <script>
-    // Contagem regressiva
-    const countdownEl = document.getElementById('countdown');
-    const targetDate = new Date('Nov 10, 2025 12:00:00').getTime();
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-      if (diff <= 0) {
-        countdownEl.innerHTML = "🚀 Vendas reabertas!";
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();    // Modal
+  </div>      <hr style="border:none;border-top:1px solid rgba(255,255,255,.04);margin:12px 0">      <p class="small">Chave Pix:</p>
+  <div class="row" style="margin-bottom:8px">
+    <code id="pixKey" style="font-size: 16px; font-weight: bold; word-break: break-all;">ebd43383-1553-4bbc-ac67-cffd1d275e51</code>
+    <button class="copy-btn" id="copyPixBtn">Copiar</button>
+  </div>      <p class="small">Após realizar o pagamento pelo Pix, envie o comprovante via WhatsApp.</p>
+  <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+    <button class="btn" id="openWhatsBtn">Abrir WhatsApp e enviar comprovante</button>
+    <button id="closeModalBtn">Fechar</button>
+  </div>      <p class="small" style="margin-top:12px">Mensagem automática exibida ao usuário ao abrir o WhatsApp:</p>
+  <div style="background:#111;padding:10px;border-radius:8px;margin-top:6px">
+    <p class="small" id="waMessagePreview">Olá! Eu comprei *{TIPO}* — R$ {VALOR}. Segue comprovante em anexo. Aguardo confirmação, por favor.</p>
+  </div>      <div id="afterMessage" class="success hidden">✅ Obrigado! Após enviar o comprovante, aguarde a confirmação.</div>
+</div>    </div>    <script>
+    // Contagem regressiva
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date('Nov 10, 2025 12:00:00').getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        countdownEl.innerHTML = "🚀 Vendas reabertas!";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();    // Modal
 const comprarBtns = document.querySelectorAll('.comprarBtn');
 const modalBackdrop = document.getElementById('modalBackdrop');
 const selTipo = document.getElementById('selTipo');
@@ -168,53 +183,53 @@ const PIX_KEY = 'ebd43383-1553-4bbc-ac67-cffd1d275e51';
 const WHATSAPP_NUMBER = '5586994624299';
 
 function openModal(tipo, valor) {
-  selTipo.textContent = tipo;
-  selValor.textContent = `R$ ${valor},00`;
-  pixKeyEl.textContent = PIX_KEY;
+  selTipo.textContent = tipo;
+  selValor.textContent = `R$ ${valor},00`;
+  pixKeyEl.textContent = PIX_KEY;
 
-  const waText = `Olá! Eu comprei *${tipo}* - R$ ${valor},00. Segue o comprovante em anexo. Aguardo confirmação, por favor.`;
-  waMessagePreview.textContent = waText;
+  const waText = `Olá! Eu comprei *${tipo}* - R$ ${valor},00. Segue o comprovante em anexo. Aguardo confirmação, por favor.`;
+  waMessagePreview.textContent = waText;
 
-  openWhatsBtn.onclick = () => {
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
-    window.open(url, '_blank');
-    afterMessage.classList.remove('hidden');
-  };
+  openWhatsBtn.onclick = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+    window.open(url, '_blank');
+    afterMessage.classList.remove('hidden');
+  };
 
-  modalBackdrop.style.display = 'flex';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  modalBackdrop.style.display = 'flex';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 comprarBtns.forEach(btn => {
-  btn.addEventListener('click', () => openModal(btn.dataset.tipo, btn.dataset.valor));
+  btn.addEventListener('click', () => openModal(btn.dataset.tipo, btn.dataset.valor));
 });
 
 document.getElementById('comprarHero').addEventListener('click', () => {
-  document.getElementById('tickets').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('tickets').scrollIntoView({ behavior: 'smooth' });
 });
 
 copyPixBtn.addEventListener('click', () => {
-  navigator.clipboard.writeText(PIX_KEY).then(() => {
-    copyPixBtn.textContent = 'Copiado!';
-    setTimeout(() => copyPixBtn.textContent = 'Copiar', 2000);
-  }).catch(() => alert('Não foi possível copiar.'));
+  navigator.clipboard.writeText(PIX_KEY).then(() => {
+    copyPixBtn.textContent = 'Copiado!';
+    setTimeout(() => copyPixBtn.textContent = 'Copiar', 2000);
+  }).catch(() => alert('Não foi possível copiar.'));
 });
 
 // REMOVIDO o event listener para comprovanteFile, pois o campo foi removido.
 
 closeModalBtn.addEventListener('click', () => {
-  modalBackdrop.style.display = 'none';
-  afterMessage.classList.add('hidden');
-  // REMOVIDO: comprovanteFile.value = '';
-  // REMOVIDO: filePreview.classList.add('hidden');
+  modalBackdrop.style.display = 'none';
+  afterMessage.classList.add('hidden');
+  // REMOVIDO: comprovanteFile.value = '';
+  // REMOVIDO: filePreview.classList.add('hidden');
 });
 
 modalBackdrop.addEventListener('click', (e) => {
-  if (e.target === modalBackdrop) {
-    modalBackdrop.style.display = 'none';
-  }
+  if (e.target === modalBackdrop) {
+    modalBackdrop.style.display = 'none';
+  }
 });
 
-</script>  </body>
+</script>  </body>
 
 </html>
